@@ -1,6 +1,7 @@
 import requests
 from django.conf import settings
 from characters.models import Character
+from django.db import IntegrityError
 
 
 def scraper_characters() -> list[Character]:

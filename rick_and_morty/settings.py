@@ -84,11 +84,11 @@ WSGI_APPLICATION = "rick_and_morty.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "HOST": os.getenv("POSTGRES_HOST"),
-        "NAME": os.getenv("POSTGRES_DB"),
-        "USER": os.getenv("POSTGRES_USER"),
+        "HOST": os.environ["POSTGRES_HOST"],
+        "NAME": os.environ["POSTGRES_DB"],
+        "USER": os.environ["POSTGRES_USER"],
         "PASSWORD": "rick_and_morty_password",
-        "PORT": os.getenv("POSTGRES_PORT"),
+        "PORT": os.environ["POSTGRES_PORT"],
     }
 }
 
